@@ -19,7 +19,7 @@ data_new <- Extracted_data_clean_Aug2022 %>%
 
 data_new %>%
   count(Year) %>%
-  ggplot(aes(x = Year, y = n)) + geom_line() + theme_bw() + coord_cartesian(xlim =c(1995, 2020), ylim = c(0, 40)) + theme(panel.background = element_blank())
+  ggplot(aes(x = Year, y = n)) + geom_scatter() + theme_bw() + coord_cartesian(xlim =c(1995, 2020), ylim = c(0, 40)) + theme(panel.background = element_blank())
 
 data_new %>%
   filter(!is.na(Patient_num)) %>%
